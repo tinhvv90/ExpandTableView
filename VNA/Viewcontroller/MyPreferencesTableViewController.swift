@@ -27,16 +27,11 @@ enum CellType: Int {
 
 let NotificationIndexOfCellType = "NotificationIndexOfCellType"
 
-struct SegueIdentifier {
-    static let embedFood            = "food"
-    static let embedBevegate        = "bevagate"
-    static let embedNewspaper       = "newspaper"
-    static let embedSeat            = "seat"
-    static let embedLifeStyle       = "lifeStyle"
-}
-
 class MyPreferencesTableViewController: UITableViewController {
 
+    let defaultHeightHeaderCell: CGFloat = 47.0
+    let defaultHeightExpandCell: CGFloat = 44.0
+    
     var myPerferences : MyPreferencesResponse?
     var subCellHeight: CGFloat = 0
     var subFoodActiveCellHeight: CGFloat = 100 {
@@ -65,7 +60,6 @@ class MyPreferencesTableViewController: UITableViewController {
     
     var subBevegateleActiveCellHeight: CGFloat = 100 {
         didSet {
-            
             tableView.reloadRows(at: [CellType.expandBevegate.index], with: .none)
         }
     }
@@ -152,7 +146,6 @@ class MyPreferencesTableViewController: UITableViewController {
         }
         self.isExpandFood = true
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.setupTableView()
         super.prepare(for: segue, sender: sender)
@@ -161,7 +154,6 @@ class MyPreferencesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         switch indexPath.row {
         case CellType.food.rawValue:
             isExpandFood = !isExpandFood
@@ -183,42 +175,46 @@ class MyPreferencesTableViewController: UITableViewController {
         switch indexPath.row {
         case CellType.expandFood.rawValue:
             if isExpandFood {
-                var count = myPerferences?.favoriteFoodDTOs?.count ?? 0
+                let countHeader = myPerferences?.favoriteFoodDTOs?.count ?? 0
+                var countCell = 0
                 for item in (myPerferences?.favoriteFoodDTOs)! {
-                    count += (item.foodDTO.flatMap({$0})?.count)!
+                    countCell += (item.foodDTO.flatMap({ $0 })?.count)!
                 }
-                return CGFloat(count * 44)
+                let height = CGFloat(countCell) * self.defaultHeightExpandCell + CGFloat(countHeader) * self.defaultHeightHeaderCell
+                return height
             } else {
                 return 0
             }
         case CellType.expandBevegate.rawValue:
             if isExpandBevegate {
-                var count = myPerferences?.favoriteBeverageDTOs?.count ?? 0
+                let countHeader = myPerferences?.favoriteBeverageDTOs?.count ?? 0
+                var countCell = 0
                 for item in (myPerferences?.favoriteBeverageDTOs)! {
-                    count += (item.beverageDTO.flatMap({$0})?.count)!
+                    countCell += (item.beverageDTO.flatMap({ $0 })?.count)!
                 }
-                subBevegateleActiveCellHeight = CGFloat(count * 44)
-                return subBevegateleActiveCellHeight
+                let height = (CGFloat(countCell) * self.defaultHeightExpandCell) + (CGFloat(countHeader) * self.defaultHeightHeaderCell)
+                return height
             } else {
                 return 0
             }
         case CellType.expandNewspaper.rawValue:
             if isExpandNewspaper {
-                var count = myPerferences?.favoriteReadingDTOs?.count ?? 0
+                let countHeader = myPerferences?.favoriteReadingDTOs?.count ?? 0
+                var countCell = 0
                 for item in (myPerferences?.favoriteReadingDTOs)! {
-                    count += (item.readingDTO.flatMap({$0})?.count)!
+                    countCell += (item.readingDTO.flatMap({ $0 })?.count)!
                 }
-                return CGFloat(count * 44)
+                let height = CGFloat(countCell) * self.defaultHeightExpandCell + CGFloat(countHeader) * self.defaultHeightHeaderCell
+                return height
             } else {
                 return 0
             }
         case CellType.expandSeat.rawValue:
             if isExpandSeat {
-                var count = myPerferences?.favoriteSeatDTOs?.count ?? 0
-                for item in (myPerferences?.favoriteSeatDTOs)! {
-                    count += (item.airlinesDTO.flatMap({$0})?.count)!
-                }
-                return CGFloat(count * 44)
+                let countHeader = myPerferences?.favoriteSeatDTOs?.count ?? 0
+                let countCell = countHeader
+                let height = CGFloat(countCell) * self.defaultHeightExpandCell + CGFloat(countHeader) * self.defaultHeightHeaderCell
+                return height
             } else {
                 return 0
             }
@@ -229,4 +225,3 @@ class MyPreferencesTableViewController: UITableViewController {
         }
     }
 }
-

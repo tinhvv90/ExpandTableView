@@ -25,16 +25,15 @@ class CheckboxViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib.init(nibName: "HeaderCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderCell")
-        self.tableView.estimatedRowHeight = 44
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedSectionHeaderHeight = 44
-        self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedSectionHeaderHeight = UITableViewAutomaticDimension
     }
     
     @objc func handleNotification(_ notification: Notification) {
         if let index = notification.object as? Int {
             self.index = index
         }
+        
         self.tableView.reloadData()
     }
     
@@ -49,11 +48,11 @@ class CheckboxViewController: UIViewController, UITableViewDataSource, UITableVi
             return myPerferences?.favoriteFoodDTOs?.count ?? 0
         case CellType.bevegate.rawValue:
             return myPerferences?.favoriteBeverageDTOs?.count ?? 0
-        case CellType.expandNewspaper.rawValue:
+        case CellType.newspaper.rawValue:
             return myPerferences?.favoriteReadingDTOs?.count ?? 0
-        case CellType.expandSeat.rawValue:
+        case CellType.seat.rawValue:
             return myPerferences?.favoriteSeatDTOs?.count ?? 0
-        case CellType.expandLifestyle.rawValue:
+        case CellType.lifestyle.rawValue:
             return 0
         default:
             break
@@ -68,11 +67,11 @@ class CheckboxViewController: UIViewController, UITableViewDataSource, UITableVi
             return myPerferences?.favoriteFoodDTOs?[section].foodDTO?.count ?? 0
         case CellType.bevegate.rawValue:
             return myPerferences?.favoriteBeverageDTOs?[section].beverageDTO?.count ?? 0
-        case CellType.expandNewspaper.rawValue:
+        case CellType.newspaper.rawValue:
             return myPerferences?.favoriteReadingDTOs?[section].readingDTO?.count ?? 0
-        case CellType.expandSeat.rawValue:
-            return myPerferences?.favoriteSeatDTOs?[section].airlinesDTO?.count ?? 0
-        case CellType.expandLifestyle.rawValue:
+        case CellType.seat.rawValue:
+            return 1
+        case CellType.lifestyle.rawValue:
             return 0
         default:
             break
@@ -82,19 +81,15 @@ class CheckboxViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckboxCell", for: indexPath)
-        if let cell = cell as? CheckboxCell {
-            guard let index = self.index else { return UITableViewCell() }
+        guard let index = self.index else { return UITableViewCell() }
+        if let checkBoxCell = cell as? CheckboxCell {
             switch index {
             case CellType.food.rawValue:
-                cell.lblTitle.text = myPerferences?.favoriteFoodDTOs?[indexPath.section].foodDTO?[indexPath.row].description ?? ""
+                checkBoxCell.lblTitle.text = myPerferences?.favoriteFoodDTOs?[indexPath.section].foodDTO?[indexPath.row].description ?? ""
             case CellType.bevegate.rawValue:
-                cell.lblTitle.text = myPerferences?.favoriteBeverageDTOs?[indexPath.section].beverageDTO?[indexPath.row].description ?? ""
-            case CellType.expandNewspaper.rawValue:
-                cell.lblTitle.text = myPerferences?.favoriteReadingDTOs?[indexPath.section].readingDTO?[indexPath.row].description ?? ""
-            case CellType.expandSeat.rawValue:
-                cell.lblTitle.text = myPerferences?.favoriteSeatDTOs?[indexPath.section].airlinesDTO?[indexPath.row].description ?? ""
-            case CellType.expandLifestyle.rawValue:
-                break
+                checkBoxCell.lblTitle.text = myPerferences?.favoriteBeverageDTOs?[indexPath.section].beverageDTO?[indexPath.row].description ?? ""
+            case CellType.newspaper.rawValue:
+                checkBoxCell.lblTitle.text = myPerferences?.favoriteReadingDTOs?[indexPath.section].readingDTO?[indexPath.row].description ?? ""
             default:
                 break
             }
@@ -111,21 +106,25 @@ class CheckboxViewController: UIViewController, UITableViewDataSource, UITableVi
                 cell.titleLbl.text = myPerferences?.favoriteFoodDTOs?[section].category ?? ""
             case CellType.bevegate.rawValue:
                 cell.titleLbl.text = myPerferences?.favoriteBeverageDTOs?[section].category ?? ""
-            case CellType.expandNewspaper.rawValue:
+            case CellType.newspaper.rawValue:
                 cell.titleLbl.text = myPerferences?.favoriteReadingDTOs?[section].category ?? ""
-            case CellType.expandSeat.rawValue:
+            case CellType.seat.rawValue:
                 cell.titleLbl.text = myPerferences?.favoriteSeatDTOs?[section].category ?? ""
-            case CellType.expandLifestyle.rawValue:
+            case CellType.lifestyle.rawValue:
                 break
             default:
                 break
             }
+            cell.index = index
         }
-        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44.0
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
+        return 47.0
     }
 }
