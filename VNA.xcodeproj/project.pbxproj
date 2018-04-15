@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		DC0D3B952081CA2A0072BF75 /* CheckboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D3B942081CA2A0072BF75 /* CheckboxCell.swift */; };
-		DC0D3B972082FB9A0072BF75 /* MyPreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0D3B962082FB9A0072BF75 /* MyPreferencesViewModel.swift */; };
 		DC30324E2081A34A0059F09B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30324D2081A34A0059F09B /* AppDelegate.swift */; };
-		DC3032502081A34A0059F09B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30324F2081A34A0059F09B /* ViewController.swift */; };
 		DC3032532081A34A0059F09B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3032512081A34A0059F09B /* Main.storyboard */; };
 		DC3032552081A34A0059F09B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3032542081A34A0059F09B /* Assets.xcassets */; };
 		DC3032582081A34A0059F09B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3032562081A34A0059F09B /* LaunchScreen.storyboard */; };
-		DC3032622081AFF30059F09B /* MyPreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3032612081AFF30059F09B /* MyPreferencesTableViewController.swift */; };
 		DC3032642081B7F60059F09B /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3032632081B7F60059F09B /* HeaderCell.swift */; };
 		DC3032662081B8160059F09B /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3032652081B8160059F09B /* HeaderCell.xib */; };
-		DC3032682081B9170059F09B /* CheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3032672081B9170059F09B /* CheckboxViewController.swift */; };
+		DCBD02FE2082FF0B0022FA42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD02FA2082FF0B0022FA42 /* ViewController.swift */; };
+		DCBD02FF2082FF0B0022FA42 /* MyPreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD02FB2082FF0B0022FA42 /* MyPreferencesTableViewController.swift */; };
+		DCBD03002082FF0B0022FA42 /* MyPreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD02FC2082FF0B0022FA42 /* MyPreferencesViewModel.swift */; };
+		DCBD03012082FF0B0022FA42 /* CheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD02FD2082FF0B0022FA42 /* CheckboxViewController.swift */; };
 		DCF1F7DD2081BBD80063F28B /* FavoriteReadingDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF1F7D02081BBD80063F28B /* FavoriteReadingDTOs.swift */; };
 		DCF1F7DE2081BBD80063F28B /* FoodDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF1F7D12081BBD80063F28B /* FoodDTO.swift */; };
 		DCF1F7DF2081BBD80063F28B /* FavoriteSeatDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF1F7D22081BBD80063F28B /* FavoriteSeatDTOs.swift */; };
@@ -36,18 +36,18 @@
 
 /* Begin PBXFileReference section */
 		DC0D3B942081CA2A0072BF75 /* CheckboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxCell.swift; sourceTree = "<group>"; };
-		DC0D3B962082FB9A0072BF75 /* MyPreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPreferencesViewModel.swift; sourceTree = "<group>"; };
 		DC30324A2081A34A0059F09B /* VNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC30324D2081A34A0059F09B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC30324F2081A34A0059F09B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC3032522081A34A0059F09B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC3032542081A34A0059F09B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC3032572081A34A0059F09B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC3032592081A34A0059F09B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC3032612081AFF30059F09B /* MyPreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPreferencesTableViewController.swift; sourceTree = "<group>"; };
 		DC3032632081B7F60059F09B /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		DC3032652081B8160059F09B /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
-		DC3032672081B9170059F09B /* CheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxViewController.swift; sourceTree = "<group>"; };
+		DCBD02FA2082FF0B0022FA42 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCBD02FB2082FF0B0022FA42 /* MyPreferencesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPreferencesTableViewController.swift; sourceTree = "<group>"; };
+		DCBD02FC2082FF0B0022FA42 /* MyPreferencesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPreferencesViewModel.swift; sourceTree = "<group>"; };
+		DCBD02FD2082FF0B0022FA42 /* CheckboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxViewController.swift; sourceTree = "<group>"; };
 		DCF1F7D02081BBD80063F28B /* FavoriteReadingDTOs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteReadingDTOs.swift; sourceTree = "<group>"; };
 		DCF1F7D12081BBD80063F28B /* FoodDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDTO.swift; sourceTree = "<group>"; };
 		DCF1F7D22081BBD80063F28B /* FavoriteSeatDTOs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSeatDTOs.swift; sourceTree = "<group>"; };
@@ -94,11 +94,11 @@
 		DC30324C2081A34A0059F09B /* VNA */ = {
 			isa = PBXGroup;
 			children = (
-				DCF1F7EA2081BCC60063F28B /* JSON */,
 				DC30324D2081A34A0059F09B /* AppDelegate.swift */,
-				DC3032602081AF170059F09B /* Viewcontroller */,
+				DCBD02F92082FF0B0022FA42 /* Viewcontroller */,
 				DC30325F2081AF0E0059F09B /* Cell */,
 				DCF1F7CF2081BBD80063F28B /* Model */,
+				DCF1F7EA2081BCC60063F28B /* JSON */,
 				DC3032512081A34A0059F09B /* Main.storyboard */,
 				DC3032542081A34A0059F09B /* Assets.xcassets */,
 				DC3032562081A34A0059F09B /* LaunchScreen.storyboard */,
@@ -117,16 +117,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		DC3032602081AF170059F09B /* Viewcontroller */ = {
+		DCBD02F92082FF0B0022FA42 /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				DC30324F2081A34A0059F09B /* ViewController.swift */,
-				DC3032612081AFF30059F09B /* MyPreferencesTableViewController.swift */,
-				DC0D3B962082FB9A0072BF75 /* MyPreferencesViewModel.swift */,
-				DC3032672081B9170059F09B /* CheckboxViewController.swift */,
+				DCBD02FA2082FF0B0022FA42 /* ViewController.swift */,
+				DCBD02FB2082FF0B0022FA42 /* MyPreferencesTableViewController.swift */,
+				DCBD02FC2082FF0B0022FA42 /* MyPreferencesViewModel.swift */,
+				DCBD02FD2082FF0B0022FA42 /* CheckboxViewController.swift */,
 			);
-			name = Viewcontroller;
-			path = "Viewcontrollẻ";
+			path = Viewcontroller;
 			sourceTree = "<group>";
 		};
 		DCF1F7CF2081BBD80063F28B /* Model */ = {
@@ -235,22 +234,22 @@
 				DCF1F7E52081BBD80063F28B /* FavoriteBeverageDTOs.swift in Sources */,
 				DCF1F7E82081BBD80063F28B /* HobbiesDTO.swift in Sources */,
 				DCF1F7DF2081BBD80063F28B /* FavoriteSeatDTOs.swift in Sources */,
+				DCBD02FF2082FF0B0022FA42 /* MyPreferencesTableViewController.swift in Sources */,
 				DCF1F7E22081BBD80063F28B /* AirlinesDTO.swift in Sources */,
 				DC3032642081B7F60059F09B /* HeaderCell.swift in Sources */,
 				DCF1F7E72081BBD80063F28B /* Hobbies.swift in Sources */,
-				DC3032502081A34A0059F09B /* ViewController.swift in Sources */,
 				DCF1F7E32081BBD80063F28B /* SportDTO.swift in Sources */,
+				DCBD03012082FF0B0022FA42 /* CheckboxViewController.swift in Sources */,
 				DCF1F7E12081BBD80063F28B /* MyPreferencesResponse.swift in Sources */,
+				DCBD03002082FF0B0022FA42 /* MyPreferencesViewModel.swift in Sources */,
+				DCBD02FE2082FF0B0022FA42 /* ViewController.swift in Sources */,
 				DCF1F7E42081BBD80063F28B /* MusicDTO.swift in Sources */,
-				DC3032622081AFF30059F09B /* MyPreferencesTableViewController.swift in Sources */,
 				DC30324E2081A34A0059F09B /* AppDelegate.swift in Sources */,
 				DCF1F7DD2081BBD80063F28B /* FavoriteReadingDTOs.swift in Sources */,
 				DC0D3B952081CA2A0072BF75 /* CheckboxCell.swift in Sources */,
-				DC0D3B972082FB9A0072BF75 /* MyPreferencesViewModel.swift in Sources */,
 				DCF1F7DE2081BBD80063F28B /* FoodDTO.swift in Sources */,
 				DCF1F7E62081BBD80063F28B /* ReadingDTO.swift in Sources */,
 				DCF1F7E02081BBD80063F28B /* FavoriteFoodDTOs.swift in Sources */,
-				DC3032682081B9170059F09B /* CheckboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
