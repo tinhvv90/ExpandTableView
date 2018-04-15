@@ -1,0 +1,864 @@
+{
+    "hobbiesDTO": {
+        "category": "HOBBIES",
+        "hobbies": [
+                    {
+                    "id": 285,
+                    "category": "12 HOBBIES",
+                    "name": "Cinema",
+                    "description": "Cinema",
+                    "isSelected": false
+                    },
+                    {
+                    "id": 286,
+                    "category": "12 HOBBIES",
+                    "name": "Painting",
+                    "description": "Painting",
+                    "isSelected": false
+                    },
+                    {
+                    "id": 282,
+                    "category": "12 HOBBIES",
+                    "name": "Photography",
+                    "description": "Photography",
+                    "isSelected": false
+                    },
+                    {
+                    "id": 511,
+                    "category": "12 HOBBIES",
+                    "name": "Travelling",
+                    "description": "Travelling",
+                    "isSelected": false
+                    },
+                    {
+                    "id": 287,
+                    "category": "12 HOBBIES",
+                    "name": "Others",
+                    "description": "Others",
+                    "isSelected": false
+                    }
+                    ],
+        "musicDTO": {
+            "category": "MUSIC",
+            "hobbies": [
+                        {
+                        "id": 505,
+                        "category": "12 HOBBIES",
+                        "name": "Music_Classic",
+                        "description": "Classic",
+                        "isSelected": false
+                        },
+                        {
+                        "id": 506,
+                        "category": "12 HOBBIES",
+                        "name": "Music_country",
+                        "description": "Country",
+                        "isSelected": false
+                        },
+                        {
+                        "id": 503,
+                        "category": "12 HOBBIES",
+                        "name": "Music_Pop",
+                        "description": "Pop",
+                        "isSelected": false
+                        },
+                        {
+                        "id": 504,
+                        "category": "12 HOBBIES",
+                        "name": "Music_Rock",
+                        "description": "Rock",
+                        "isSelected": false
+                        }
+                        ]
+        },
+        "sportDTO": {
+            "category": "SPORT",
+            "hobbies": [
+                        {
+                        "id": 510,
+                        "category": "12 HOBBIES",
+                        "name": "Sports_Football",
+                        "description": "Football",
+                        "isSelected": false
+                        },
+                        {
+                        "id": 195,
+                        "category": "12 HOBBIES",
+                        "name": "Sports_Golf",
+                        "description": "Golf",
+                        "isSelected": false
+                        },
+                        {
+                        "id": 281,
+                        "category": "12 HOBBIES",
+                        "name": "Sports_Swim",
+                        "description": "Swimming",
+                        "isSelected": false
+                        },
+                        {
+                        "id": 277,
+                        "category": "12 HOBBIES",
+                        "name": "Sports_Tennis",
+                        "description": "Tennis",
+                        "isSelected": false
+                        }
+                        ]
+        }
+    },
+    "favoriteSeatDTOs": [
+                         {
+                         "category": "Boeing 787",
+                         "airlinesDTO": [
+                                         {
+                                         "id": 395,
+                                         "category": "13 Seat",
+                                         "name": "787_Aisle",
+                                         "description": "Aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 400,
+                                         "category": "13 Seat",
+                                         "name": "787_Bulkhead",
+                                         "description": "Bulkhead Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 398,
+                                         "category": "13 Seat",
+                                         "name": "787_CentreA",
+                                         "description": "Centre aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 397,
+                                         "category": "13 Seat",
+                                         "name": "787_CentreW",
+                                         "description": "Centre window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 399,
+                                         "category": "13 Seat",
+                                         "name": "787_Emer",
+                                         "description": "Emergency exit Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 401,
+                                         "category": "13 Seat",
+                                         "name": "787_Rear",
+                                         "description": "Rear Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 396,
+                                         "category": "13 Seat",
+                                         "name": "787_Next2W",
+                                         "description": "Seat next to window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 394,
+                                         "category": "13 Seat",
+                                         "name": "787_Window",
+                                         "description": "Window Seat",
+                                         "isSelected": false
+                                         }
+                                         ]
+                         },
+                         {
+                         "category": "Boeing 777",
+                         "airlinesDTO": [
+                                         {
+                                         "id": 404,
+                                         "category": "13 Seat",
+                                         "name": "777_Aisle",
+                                         "description": "Aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 409,
+                                         "category": "13 Seat",
+                                         "name": "777_Bulkhead",
+                                         "description": "Bulkhead Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 407,
+                                         "category": "13 Seat",
+                                         "name": "777_CentreA",
+                                         "description": "Centre aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 406,
+                                         "category": "13 Seat",
+                                         "name": "777_CentreW",
+                                         "description": "Centre window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 408,
+                                         "category": "13 Seat",
+                                         "name": "777_Emer",
+                                         "description": "Emergency exit Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 410,
+                                         "category": "13 Seat",
+                                         "name": "777_Rear",
+                                         "description": "Rear Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 405,
+                                         "category": "13 Seat",
+                                         "name": "777_Next2W",
+                                         "description": "Seat next to window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 403,
+                                         "category": "13 Seat",
+                                         "name": "777_Window",
+                                         "description": "Window Seat",
+                                         "isSelected": false
+                                         }
+                                         ]
+                         },
+                         {
+                         "category": "Airbus 350",
+                         "airlinesDTO": [
+                                         {
+                                         "id": 413,
+                                         "category": "13 Seat",
+                                         "name": "350_Aisle",
+                                         "description": "Aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 418,
+                                         "category": "13 Seat",
+                                         "name": "350_Bulkhead",
+                                         "description": "Bulkhead Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 416,
+                                         "category": "13 Seat",
+                                         "name": "350_CentreA",
+                                         "description": "Centre aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 415,
+                                         "category": "13 Seat",
+                                         "name": "350_CentreW",
+                                         "description": "Centre window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 417,
+                                         "category": "13 Seat",
+                                         "name": "350_Emer",
+                                         "description": "Emergency exit Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 419,
+                                         "category": "13 Seat",
+                                         "name": "350_Rear",
+                                         "description": "Rear Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 414,
+                                         "category": "13 Seat",
+                                         "name": "350_Next2W",
+                                         "description": "Seat next to window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 412,
+                                         "category": "13 Seat",
+                                         "name": "350_Window",
+                                         "description": "Window Seat",
+                                         "isSelected": false
+                                         }
+                                         ]
+                         },
+                         {
+                         "category": "Airbus 330",
+                         "airlinesDTO": [
+                                         {
+                                         "id": 422,
+                                         "category": "13 Seat",
+                                         "name": "330_Aisle",
+                                         "description": "Aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 427,
+                                         "category": "13 Seat",
+                                         "name": "330_Bulkhead",
+                                         "description": "Bulkhead Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 425,
+                                         "category": "13 Seat",
+                                         "name": "330_CentreA",
+                                         "description": "Centre aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 424,
+                                         "category": "13 Seat",
+                                         "name": "330_CentreW",
+                                         "description": "Centre window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 426,
+                                         "category": "13 Seat",
+                                         "name": "330_Emer",
+                                         "description": "Emergency exit Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 428,
+                                         "category": "13 Seat",
+                                         "name": "330_Rear",
+                                         "description": "Rear Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 423,
+                                         "category": "13 Seat",
+                                         "name": "330_Next2W",
+                                         "description": "Seat next to window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 421,
+                                         "category": "13 Seat",
+                                         "name": "330_Window",
+                                         "description": "Window Seat",
+                                         "isSelected": false
+                                         }
+                                         ]
+                         },
+                         {
+                         "category": "Airbus 321",
+                         "airlinesDTO": [
+                                         {
+                                         "id": 431,
+                                         "category": "13 Seat",
+                                         "name": "321_Aisle",
+                                         "description": "Aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 434,
+                                         "category": "13 Seat",
+                                         "name": "321_Bulkhead",
+                                         "description": "Bulkhead Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 433,
+                                         "category": "13 Seat",
+                                         "name": "321_Emer",
+                                         "description": "Emergency exit Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 435,
+                                         "category": "13 Seat",
+                                         "name": "321_Rear",
+                                         "description": "Rear Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 432,
+                                         "category": "13 Seat",
+                                         "name": "321_Next2W",
+                                         "description": "Seat next to window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 430,
+                                         "category": "13 Seat",
+                                         "name": "321_Window",
+                                         "description": "Window Seat",
+                                         "isSelected": false
+                                         }
+                                         ]
+                         },
+                         {
+                         "category": "ATR 72",
+                         "airlinesDTO": [
+                                         {
+                                         "id": 438,
+                                         "category": "13 Seat",
+                                         "name": "72_Aisle",
+                                         "description": "Aisle Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 441,
+                                         "category": "13 Seat",
+                                         "name": "72_Bulkhead",
+                                         "description": "Bulkhead Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 440,
+                                         "category": "13 Seat",
+                                         "name": "72_Emer",
+                                         "description": "Emergency exit Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 442,
+                                         "category": "13 Seat",
+                                         "name": "72_Rear",
+                                         "description": "Rear Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 439,
+                                         "category": "13 Seat",
+                                         "name": "72_Next2W",
+                                         "description": "Seat next to window Seat",
+                                         "isSelected": false
+                                         },
+                                         {
+                                         "id": 437,
+                                         "category": "13 Seat",
+                                         "name": "72_Window",
+                                         "description": "Window Seat",
+                                         "isSelected": false
+                                         }
+                                         ]
+                         }
+                         ],
+    "favoriteReadingDTOs": [
+                            {
+                            "category": "Daily newspaper preferences",
+                            "readingDTO": [
+                                           {
+                                           "id": 490,
+                                           "category": "16 Reading",
+                                           "name": "News_Economic",
+                                           "description": "Economic, investment",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 495,
+                                           "category": "16 Reading",
+                                           "name": "News_Law S",
+                                           "description": "Law, Security",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 491,
+                                           "category": "16 Reading",
+                                           "name": "News_Political",
+                                           "description": "Political",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 492,
+                                           "category": "16 Reading",
+                                           "name": "News_Socio",
+                                           "description": "Sociocultural",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 493,
+                                           "category": "16 Reading",
+                                           "name": "News_Sports",
+                                           "description": "Sports",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 494,
+                                           "category": "16 Reading",
+                                           "name": "News_Tourism",
+                                           "description": "Tourism",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 496,
+                                           "category": "16 Reading",
+                                           "name": "News_Others",
+                                           "description": "Others",
+                                           "isSelected": false
+                                           }
+                                           ]
+                            },
+                            {
+                            "category": "Magazine preferences",
+                            "readingDTO": [
+                                           {
+                                           "id": 498,
+                                           "category": "16 Reading",
+                                           "name": "Magaz_Business",
+                                           "description": "Business",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 500,
+                                           "category": "16 Reading",
+                                           "name": "Magaz_Sports",
+                                           "description": "Sports",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 501,
+                                           "category": "16 Reading",
+                                           "name": "Magaz_Techno",
+                                           "description": "Technology",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 499,
+                                           "category": "16 Reading",
+                                           "name": "Magaz_Women M",
+                                           "description": "Women/Men",
+                                           "isSelected": false
+                                           },
+                                           {
+                                           "id": 502,
+                                           "category": "16 Reading",
+                                           "name": "Magaz_Others",
+                                           "description": "Others",
+                                           "isSelected": false
+                                           }
+                                           ]
+                            }
+                            ],
+    "favoriteFoodDTOs": [
+                         {
+                         "category": "Food cuisine preferences",
+                         "foodDTO": [
+                                     {
+                                     "id": 446,
+                                     "category": "14 Eating",
+                                     "name": "Style_CN",
+                                     "description": "Chinese cuisine",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 447,
+                                     "category": "14 Eating",
+                                     "name": "Style_JP",
+                                     "description": "Japanese cuisine",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 448,
+                                     "category": "14 Eating",
+                                     "name": "Style_KR",
+                                     "description": "Korean cuisine",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 449,
+                                     "category": "14 Eating",
+                                     "name": "Style_TH",
+                                     "description": "Thai cuisine",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 445,
+                                     "category": "14 Eating",
+                                     "name": "Style_VN",
+                                     "description": "Vietnamese cuisine",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 444,
+                                     "category": "14 Eating",
+                                     "name": "Style_EU",
+                                     "description": "Western style",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 450,
+                                     "category": "14 Eating",
+                                     "name": "Style_OT",
+                                     "description": "Others",
+                                     "isSelected": false
+                                     }
+                                     ]
+                         },
+                         {
+                         "category": "Speacial food preferences",
+                         "foodDTO": [
+                                     {
+                                     "id": 457,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Bland",
+                                     "description": "Bland Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 458,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Diabetic",
+                                     "description": "Diabetic Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 464,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Fruit",
+                                     "description": "Fruit Platter Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 459,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Gluten",
+                                     "description": "Gluten intolerant Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 455,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Hindu",
+                                     "description": "Hindu Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 460,
+                                     "category": "14 Eating",
+                                     "name": "Meal_L Calorie",
+                                     "description": "Low Calorie Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 461,
+                                     "category": "14 Eating",
+                                     "name": "Meal_L fat",
+                                     "description": "Low fat Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 463,
+                                     "category": "14 Eating",
+                                     "name": "Meal_L lactose",
+                                     "description": "Low lactose Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 462,
+                                     "category": "14 Eating",
+                                     "name": "Meal_L salt",
+                                     "description": "Low salt Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 456,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Moslem",
+                                     "description": "Moslem Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 466,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Seafood",
+                                     "description": "Seafood Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 453,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Lactoovo",
+                                     "description": "Vegetarian Lacto-ovo Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 454,
+                                     "category": "14 Eating",
+                                     "name": "Meal_V Oriental",
+                                     "description": "Vegetarian Oriental Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 465,
+                                     "category": "14 Eating",
+                                     "name": "Meal_V Raw",
+                                     "description": "Vegetarian Raw Meal",
+                                     "isSelected": false
+                                     },
+                                     {
+                                     "id": 452,
+                                     "category": "14 Eating",
+                                     "name": "Meal_Vegan",
+                                     "description": "Vegetarian Vegan Meal",
+                                     "isSelected": false
+                                     }
+                                     ]
+                         }
+                         ],
+    "favoriteBeverageDTOs": [
+                             {
+                             "category": "Alcoholic beverage",
+                             "beverageDTO": [
+                                             {
+                                             "id": 477,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Beer",
+                                             "description": "Beer",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 469,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Brandy",
+                                             "description": "Brandy/Cognac",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 475,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Champ",
+                                             "description": "Champagne",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 476,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Cocktail",
+                                             "description": "Cocktail",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 470,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Gin",
+                                             "description": "Gin",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 472,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Liqueurs",
+                                             "description": "Liqueurs",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 474,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_R Wine",
+                                             "description": "Red Wine",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 471,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Vodka",
+                                             "description": "Vodka",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 468,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_Whiskey",
+                                             "description": "Whiskey",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 473,
+                                             "category": "15 Drinking",
+                                             "name": "Alco_White W",
+                                             "description": "White Wine",
+                                             "isSelected": false
+                                             }
+                                             ]
+                             },
+                             {
+                             "category": "Non-Alcoholic beverage",
+                             "beverageDTO": [
+                                             {
+                                             "id": 482,
+                                             "category": "15 Drinking",
+                                             "name": "N Alco_Mineral",
+                                             "description": "Highclass mineral water",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 483,
+                                             "category": "15 Drinking",
+                                             "name": "N Alco_Isotonic",
+                                             "description": "Isotonic drink",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 486,
+                                             "category": "15 Drinking",
+                                             "name": "N Alco_Milk",
+                                             "description": "Milk",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 480,
+                                             "category": "15 Drinking",
+                                             "name": "N Alco_Purified",
+                                             "description": "Purified water",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 479,
+                                             "category": "15 Drinking",
+                                             "name": "N Alco_Soft d",
+                                             "description": "Soft drinks",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 481,
+                                             "category": "15 Drinking",
+                                             "name": "N Alco_Sparklin",
+                                             "description": "Sparkling water",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 484,
+                                             "category": "15 Drinking",
+                                             "name": "N Alco_Tetrapac",
+                                             "description": "Tetrapack juice",
+                                             "isSelected": false
+                                             }
+                                             ]
+                             },
+                             {
+                             "category": "Hot beverage",
+                             "beverageDTO": [
+                                             {
+                                             "id": 488,
+                                             "category": "15 Drinking",
+                                             "name": "Hot b_Coffee",
+                                             "description": "Coffee",
+                                             "isSelected": false
+                                             },
+                                             {
+                                             "id": 487,
+                                             "category": "15 Drinking",
+                                             "name": "Hot b_Tea",
+                                             "description": "Tea",
+                                             "isSelected": false
+                                             }
+                                             ]
+                             }
+                             ],
+    "responsCode": "0",
+    "messageKey": "SUCCESS",
+    "viMessage": "",
+    "enMessage": ""
+}
