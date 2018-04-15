@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HYm-Gb-RAC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HYm-Gb-RAC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -186,7 +185,7 @@
                                                     <rect key="frame" x="8" y="0.0" width="343" height="198.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
-                                                        <segue destination="QkH-Y0-JpN" kind="embed" identifier="beverage" id="EDb-QR-WYz"/>
+                                                        <segue destination="QkH-Y0-JpN" kind="embed" identifier="bevegate" id="EDb-QR-WYz"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
@@ -458,12 +457,12 @@
         <!--Checkbox View Controller-->
         <scene sceneID="pZT-qY-cgn">
             <objects>
-                <viewController id="QkH-Y0-JpN" customClass="CheckboxViewController" customModule="VNA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QkH-Y0-JpN" customClass="CheckboxViewController" customModule="VNA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m8P-JR-QCd">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="199"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="198.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DUl-sk-nIM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DUl-sk-nIM">
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="198.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -523,6 +522,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QkH-Y0-JpN" id="dWN-pe-N7q"/>
+                                    <outlet property="delegate" destination="QkH-Y0-JpN" id="m3z-X2-z9R"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -549,6 +552,6 @@
         <image name="unchecked_checkbox" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QdZ-ZW-wRW"/>
+        <segue reference="EDb-QR-WYz"/>
     </inferredMetricsTieBreakers>
 </document>

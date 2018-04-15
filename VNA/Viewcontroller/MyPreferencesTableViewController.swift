@@ -25,10 +25,19 @@ enum CellType: Int {
     }
 }
 
+let NotificationIndexOfCellType = "NotificationIndexOfCellType"
+
+struct SegueIdentifier {
+    static let embedFood            = "food"
+    static let embedBevegate        = "bevagate"
+    static let embedNewspaper       = "newspaper"
+    static let embedSeat            = "seat"
+    static let embedLifeStyle       = "lifeStyle"
+}
+
 class MyPreferencesTableViewController: UITableViewController {
 
     var myPerferences : MyPreferencesResponse?
-    
     var subCellHeight: CGFloat = 0
     var subFoodActiveCellHeight: CGFloat = 100 {
         didSet {
@@ -56,6 +65,7 @@ class MyPreferencesTableViewController: UITableViewController {
     
     var subBevegateleActiveCellHeight: CGFloat = 100 {
         didSet {
+            
             tableView.reloadRows(at: [CellType.expandBevegate.index], with: .none)
         }
     }
@@ -64,27 +74,12 @@ class MyPreferencesTableViewController: UITableViewController {
         didSet {
             subCellHeight = isExpandFood ? subFoodActiveCellHeight : 0
             tableView.reloadRows(at: [CellType.expandFood.index], with: isExpandFood ? .bottom : .top)
-        }
-    }
-    
-    var isExpandSeat = false {
-        didSet {
-            subCellHeight = isExpandSeat ? subSeatActiveCellHeight : 0
-            tableView.reloadRows(at: [CellType.expandSeat.index], with: isExpandSeat ? .bottom : .top)
-        }
-    }
-    
-    var isExpandNewspaper = false {
-        didSet {
-            subCellHeight = isExpandNewspaper ? subNewspaperActiveCellHeight : 0
-            tableView.reloadRows(at: [CellType.expandSeat.index], with: isExpandNewspaper ? .bottom : .top)
-        }
-    }
-    
-    var isExpandLifestyle = false {
-        didSet {
-            subCellHeight = isExpandLifestyle ? subLifestyleActiveCellHeight : 0
-            tableView.reloadRows(at: [CellType.expandLifestyle.index], with: isExpandLifestyle ? .bottom : .top)
+            if isExpandFood {
+                self.isExpandBevegate = false
+                self.isExpandNewspaper = false
+                self.isExpandSeat = false
+                self.isExpandLifestyle = false
+            }
         }
     }
     
@@ -92,12 +87,59 @@ class MyPreferencesTableViewController: UITableViewController {
         didSet {
             subCellHeight = isExpandBevegate ? subBevegateleActiveCellHeight : 0
             tableView.reloadRows(at: [CellType.expandBevegate.index], with: isExpandBevegate ? .bottom : .top)
+            if isExpandBevegate {
+                self.isExpandFood = false
+                self.isExpandLifestyle = false
+                self.isExpandNewspaper = false
+                self.isExpandSeat = false
+            }
         }
     }
     
+    var isExpandNewspaper = false {
+        didSet {
+            subCellHeight = isExpandNewspaper ? subNewspaperActiveCellHeight : 0
+            tableView.reloadRows(at: [CellType.expandSeat.index], with: isExpandNewspaper ? .bottom : .top)
+            if isExpandNewspaper {
+                self.isExpandSeat = false
+                self.isExpandBevegate = false
+                self.isExpandFood = false
+                self.isExpandLifestyle = false
+            }
+        }
+    }
+    
+    var isExpandSeat = false {
+        didSet {
+            subCellHeight = isExpandSeat ? subSeatActiveCellHeight : 0
+            tableView.reloadRows(at: [CellType.expandSeat.index], with: isExpandSeat ? .bottom : .top)
+            if isExpandSeat {
+                self.isExpandFood = false
+                self.isExpandBevegate = false
+                self.isExpandLifestyle = false
+                self.isExpandNewspaper = false
+            }
+        }
+    }
+    
+    var isExpandLifestyle = false {
+        didSet {
+            subCellHeight = isExpandLifestyle ? subLifestyleActiveCellHeight : 0
+            tableView.reloadRows(at: [CellType.expandLifestyle.index], with: isExpandLifestyle ? .bottom : .top)
+            if isExpandLifestyle {
+                self.isExpandFood = false
+                self.isExpandBevegate = false
+                self.isExpandNewspaper = false
+                self.isExpandSeat = false
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    func setupTableView() {
         if let path = Bundle.main.path(forResource: "mypreferenceJson", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -108,48 +150,33 @@ class MyPreferencesTableViewController: UITableViewController {
                 // handle error
             }
         }
+        self.isExpandFood = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.setupTableView()
+        super.prepare(for: segue, sender: sender)
         let checkboxVC = segue.destination as? CheckboxViewController
         checkboxVC?.myPerferences = myPerferences
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         switch indexPath.row {
         case CellType.food.rawValue:
             isExpandFood = !isExpandFood
-            isExpandNewspaper = false
-            isExpandLifestyle = false
-            isExpandBevegate = false
-            isExpandSeat = false
-        case CellType.seat.rawValue:
-            isExpandSeat = !isExpandSeat
-            isExpandNewspaper = false
-            isExpandLifestyle = false
-            isExpandBevegate = false
-            isExpandFood = false
         case CellType.bevegate.rawValue:
             isExpandBevegate = !isExpandBevegate
-            isExpandNewspaper = false
-            isExpandLifestyle = false
-            isExpandSeat = false
-            isExpandFood = false
-        case CellType.lifestyle.rawValue:
-            isExpandLifestyle = !isExpandLifestyle
-            isExpandNewspaper = false
-            isExpandBevegate = false
-            isExpandSeat = false
-            isExpandFood = false
         case CellType.newspaper.rawValue:
             isExpandNewspaper = !isExpandNewspaper
-            isExpandLifestyle = false
-            isExpandBevegate = false
-            isExpandSeat = false
-            isExpandFood = false
+        case CellType.seat.rawValue:
+            isExpandSeat = !isExpandSeat
+        case CellType.lifestyle.rawValue:
+            isExpandLifestyle = !isExpandLifestyle
         default:
             break
         }
+        NotificationCenter.default.post(name: NSNotification.Name.init(NotificationIndexOfCellType), object: indexPath.row)
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -159,6 +186,27 @@ class MyPreferencesTableViewController: UITableViewController {
                 var count = myPerferences?.favoriteFoodDTOs?.count ?? 0
                 for item in (myPerferences?.favoriteFoodDTOs)! {
                     count += (item.foodDTO.flatMap({$0})?.count)!
+                }
+                return CGFloat(count * 44)
+            } else {
+                return 0
+            }
+        case CellType.expandBevegate.rawValue:
+            if isExpandBevegate {
+                var count = myPerferences?.favoriteBeverageDTOs?.count ?? 0
+                for item in (myPerferences?.favoriteBeverageDTOs)! {
+                    count += (item.beverageDTO.flatMap({$0})?.count)!
+                }
+                subBevegateleActiveCellHeight = CGFloat(count * 44)
+                return subBevegateleActiveCellHeight
+            } else {
+                return 0
+            }
+        case CellType.expandNewspaper.rawValue:
+            if isExpandNewspaper {
+                var count = myPerferences?.favoriteReadingDTOs?.count ?? 0
+                for item in (myPerferences?.favoriteReadingDTOs)! {
+                    count += (item.readingDTO.flatMap({$0})?.count)!
                 }
                 return CGFloat(count * 44)
             } else {
@@ -174,31 +222,11 @@ class MyPreferencesTableViewController: UITableViewController {
             } else {
                 return 0
             }
-        case CellType.expandBevegate.rawValue:
-            if isExpandBevegate {
-                var count = myPerferences?.favoriteBeverageDTOs?.count ?? 0
-                for item in (myPerferences?.favoriteBeverageDTOs)! {
-                    count += (item.beverageDTO.flatMap({$0})?.count)!
-                }
-                return CGFloat(count * 44)
-            } else {
-                return 0
-            }
         case CellType.expandLifestyle.rawValue:
             return 0
-        case CellType.expandNewspaper.rawValue:
-            if isExpandNewspaper {
-                var count = myPerferences?.favoriteReadingDTOs?.count ?? 0
-                for item in (myPerferences?.favoriteReadingDTOs)! {
-                    count += (item.readingDTO.flatMap({$0})?.count)!
-                }
-                return CGFloat(count * 44)
-            } else {
-                return 0
-            }
         default:
             return 55
         }
     }
-    
 }
+

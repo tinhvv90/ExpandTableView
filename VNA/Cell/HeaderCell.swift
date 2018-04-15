@@ -11,12 +11,15 @@ import UIKit
 class HeaderCell: UITableViewHeaderFooterView {
 
     @IBOutlet weak var titleLbl: UILabel!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundView = UIView()
+        backgroundView?.backgroundColor = UIColor.init(red: 224/255, green: 242/255, blue: 246/255, alpha: 1.0)
     }
-    */
-
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLbl.text = ""
+    }
 }
